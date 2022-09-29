@@ -1,6 +1,7 @@
 package src.main.models;
 
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.function.BooleanSupplier;
 
 public class Team {
@@ -131,12 +132,14 @@ public class Team {
         if (!(obj instanceof Team)) {
             return false;
         }
-        Team team = (Team)obj;
+        Team team = (Team) obj;
         return house.equals(team.house) &&
-        keeper.equals(team.keeper) &&
-        seeker.equals(team.seeker) && Arrays.toString(chasers).equals(Arrays.toString(team.chasers));
+                keeper.equals(team.keeper) &&
+                seeker.equals(team.seeker) && Arrays.toString(chasers).equals(Arrays.toString(team.chasers));
     }
 
-    
+    public int hashCode() {
+        return Objects.hash(house, keeper,seeker,Arrays.toString(chasers));
+    }
 
 }
