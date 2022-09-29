@@ -78,6 +78,7 @@ public class Team {
         }
         this.keeper = keeper;
     }
+
     public String getSeeker() {
         return seeker;
     }
@@ -122,5 +123,20 @@ public class Team {
                 "Seeker: " + this.seeker + "\n" +
                 "Chasers: " + Arrays.toString(this.chasers) + "\n";
     }
+
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (!(obj instanceof Team)) {
+            return false;
+        }
+        Team team = (Team)obj;
+        return house.equals(team.house) &&
+        keeper.equals(team.keeper) &&
+        seeker.equals(team.seeker) && Arrays.toString(chasers).equals(Arrays.toString(team.chasers));
+    }
+
+    
 
 }
