@@ -15,8 +15,7 @@ public class Main {
                                 new String[] { "Bridget", "Harper", "Malcolm" });
 
                 Game game = new Game(home, away);
-
-                System.out.println(game);
+                System.out.println(game.getTeam("GRYFFINDOR"));
         }
 
         /**
