@@ -2,7 +2,6 @@ package src.main.models;
 
 import java.util.Arrays;
 import java.util.Objects;
-import java.util.function.BooleanSupplier;
 
 public class Team {
     private String house;
